@@ -9,7 +9,7 @@ WHERE (first_name = 'Irena'
        OR first_name = 'Vidya'
        OR first_name = 'Maya')
       AND gender = 'M'
-ORDER BY first_name ASC;
+ORDER BY first_name;
 
 SELECT
   first_name,
@@ -20,17 +20,19 @@ WHERE (first_name = 'Irena'
        OR first_name = 'Vidya'
        OR first_name = 'Maya')
       AND gender = 'M'
-ORDER BY first_name ASC, last_name ASC;
+ORDER BY last_name, first_name;
 
 SELECT *
 FROM employees
 WHERE last_name LIKE 'E%'
-      OR last_name LIKE '%E';
+      OR last_name LIKE '%E'
+ORDER BY emp_no DESC;
 
 SELECT *
 FROM employees
 WHERE last_name LIKE 'E%'
-      AND last_name LIKE '%E';
+      AND last_name LIKE '%E'
+ORDER BY emp_no DESC;
 
 SELECT *
 FROM employees
