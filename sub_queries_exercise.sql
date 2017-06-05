@@ -8,11 +8,18 @@ WHERE hire_date IN (
   WHERE emp_no = 101010
 );
 
-SELECT *
+SELECT title
 FROM titles
-WHERE title IN (
-  SELECT title
+WHERE emp_no IN (
+  SELECT emp_no
   FROM employees
   WHERE first_name = 'Aamod'
 );
 
+SELECT *
+FROM employees
+WHERE gender = 'F' AND emp_no IN (
+  SELECT emp_no
+  FROM dept_manager
+  WHERE to_date > now()
+);
